@@ -227,7 +227,6 @@ a, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 12px;
 }
 
 .aboutme__profile {
@@ -235,7 +234,7 @@ a, li {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .aboutme__profile--image {
@@ -247,13 +246,15 @@ a, li {
 
 .aboutme__greetings {
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .aboutme__greetings--top {
-  margin: 12px;
+  margin-bottom: 16px;
 }
 
-.aboutme__greetings--bottom {
-  font-size: 16px;
+.aboutme__socials--links {
+  margin: 0 4px;
+  font-size: 24px;
 }
 /*# sourceMappingURL=styles.css.map */

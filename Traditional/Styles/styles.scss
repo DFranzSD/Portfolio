@@ -131,14 +131,13 @@ a, li{
 .aboutme{
     flex-direction: column;
     align-items: center;
-    margin-bottom: 12px;
 
     &__profile{
         width: 100px;
         height: 100px;
         border-radius: 50%;
         overflow:hidden;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
 
         &--image{
             width: 100%;
@@ -149,14 +148,20 @@ a, li{
 
     &__greetings{
         text-align: center;
+        margin-bottom:24px;
+        
         &--top{
-            margin:12px;
-        }
-        &--bottom{
-            font-size:16px;
+            margin-bottom:16px;
         }
     }
 
-    &
+    &__socials{
+
+        &--links{
+            margin: 0 4px;
+            font-size: 24px;
+        }
+    }
+    
 
 }
