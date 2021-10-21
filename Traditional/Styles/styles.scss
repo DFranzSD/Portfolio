@@ -6,6 +6,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+  }  
+  
 body{
     background-color: #f4f4f4;
 }
@@ -54,23 +59,22 @@ a, li{
     color: #1561f0;
 }
 
-.wave{
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: infinite;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+.wave {
     display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
   }
-  @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
-}
+  
+  @keyframes animate-wave {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
 
 // NAV
 .navMenu{
@@ -101,10 +105,11 @@ a, li{
     margin: 0 12px;
 
     &--anchor{
+        transition: all 100ms ease;
         color:#131313;
     }
     &--hover:hover{
-        color:#1561f0;
+        border-bottom: 3px solid #131313;
     }
 
     &--anchor-primary{
@@ -152,14 +157,20 @@ a, li{
         
         &--top{
             margin-bottom:16px;
+            font-size: 32px;
+        }
+        &--bottom{
+            font-size: 20px;
         }
     }
 
     &__socials{
 
         &--links{
-            margin: 0 4px;
+            padding: 0 4px;
             font-size: 24px;
+            cursor: pointer;
+            color: #131313;
         }
     }
     

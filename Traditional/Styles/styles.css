@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4f4f4;
 }
@@ -63,92 +67,38 @@ a, li {
 }
 
 .wave {
-  -webkit-animation-name: wave-animation;
-          animation-name: wave-animation;
-  /* Refers to the name of your @keyframes element below */
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  /* Change to speed up or slow down */
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  /* Never stop waving :) */
-  -webkit-transform-origin: 70% 70%;
-          transform-origin: 70% 70%;
-  /* Pivot around the bottom-left palm */
   display: inline-block;
+  -webkit-animation: animate-wave 500ms infinite ease-in-out;
+          animation: animate-wave 500ms infinite ease-in-out;
 }
 
-@-webkit-keyframes wave-animation {
+@-webkit-keyframes animate-wave {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-  }
-  30% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  40% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
-  60% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  /* Reset for the last half to pause */
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
-@keyframes wave-animation {
+@keyframes animate-wave {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-  }
-  30% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  40% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
-  60% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  /* Reset for the last half to pause */
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
@@ -188,11 +138,13 @@ a, li {
 }
 
 .nav__link--anchor {
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
   color: #131313;
 }
 
 .nav__link--hover:hover {
-  color: #1561f0;
+  border-bottom: 3px solid #131313;
 }
 
 .nav__link--anchor-primary {
@@ -251,10 +203,17 @@ a, li {
 
 .aboutme__greetings--top {
   margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.aboutme__greetings--bottom {
+  font-size: 20px;
 }
 
 .aboutme__socials--links {
-  margin: 0 4px;
+  padding: 0 4px;
   font-size: 24px;
+  cursor: pointer;
+  color: #131313;
 }
 /*# sourceMappingURL=styles.css.map */
